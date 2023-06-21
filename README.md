@@ -1,14 +1,14 @@
 
 # About the project
 
-Python application for an KFC database. Project for the curricular unit of DataBases.
+Python application for a KFC database. Project for the curricular unit of DataBases.
 
 #  Reference
 
 - [PyMySQL](https://pymysql.readthedocs.io/)
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 - [Jinja templates](https://jinja.palletsprojects.com/en/3.0.x/)
-- [Eduardo R. B. Marques](https://www.dcc.fc.up.pt/~edrdo/), DCC/FCUP
+- [Eduardo R. B. Marques](https://www.dcc.fc.up.pt/~edrdo/), DCC/FCUP (https://github.com/edrdo/MovieStreamApp)
 
 
 # Installation
