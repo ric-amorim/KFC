@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Menus{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <table> 
+  <tr>
+    <th><b>Id</b></th>
+    <th><b>Nome</b></th>
+    <th><b>Contagem de Comida:</b></th>
+    <th><b>Número de Bebidas:</b></th>
+   </tr>
+   
+   {% for m in menu %}
+   <tr onclick="window.location='/menu/{{ m.Id }}'" style="cursor: pointer;">
+     <td><a href='/menu/{{ m.Id }}'> {{ m.Id }} </td>
+     <td><a href='/menu/{{ m.Id }}'> {{ m.Nome }}</td>
+     <td>{{ m.Cont }}</td>
+     <td>{{ m.NBeb }}</td>
+   </tr>
+ {% endfor %}
+  </table>
+{% endblock %}

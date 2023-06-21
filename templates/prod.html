@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %} {{ comida.Nome }} {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <h2>Informação do Produto</h2>
+  <p>
+    <b>ID: </b>{{ comida.Id }}
+  </p>
+  <p>
+    <b>Nome: </b>{{ comida.Nome }}
+  </p>
+  <p>
+    <b>Energia (J): </b>{{ comida.EJ }}
+  </p>
+  <p>
+    <b>Lipidos: </b>{{ comida.Lip }}
+  </p>
+  <p>
+    <b>Dos quais Saturados: </b>{{ comida.Sat }}
+  </p>
+  <p>
+    <b>Hidratos: </b>{{ comida.Hidr }}
+  </p>
+  <p>
+    <b>Açucar: </b>{{ comida.Acucar }}
+  </p>
+  <p>
+    <b>Proteínas: </b>{{ comida.Prot }}
+  </p>
+  <p>
+    <b>Sal: </b>{{ comida.Sal }}
+  </p>
+  <p>
+    <b>Ingredientes: </b>
+    {% if ingre != () %}
+    <ul>
+      {% for in in ingre %}      
+        <li> {{ in.ing }}</a></li>
+      {% endfor %}
+    </ul>
+    {% else %}
+      N/A
+    {% endif %}
+  
+  </p>
+{% endblock %}

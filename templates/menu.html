@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+>{% block header %}
+  <h1>{% block title %} {{menu.Nome}} {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <h2>O Menu Inclui:</h2>
+  {%for com in comida%}
+  {% if com != ()%}
+    <p>
+      <b>{{com[0].cat}}:</b>
+      {% for x in com %}
+        <a href="/comida/{{x.id}}">{{x.Nome}}</a>,
+      {%endfor%}
+    </p>
+  {%endif%}
+  {%endfor%}
+
+{% endblock %}
+

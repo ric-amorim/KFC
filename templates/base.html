@@ -1,0 +1,14 @@
+<!doctype html>
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+  <button onclick="window.location='/'" style="cursor: pointer;">Home</button>
+  <button onclick="window.location='/menu/'" style="cursor: pointer;" >Menus</button>
+  <button onclick="window.location='/comida/'" style="cursor: pointer;">Produtos</button>
+</nav>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% block content %}{% endblock %}
+</section>

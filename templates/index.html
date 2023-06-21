@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Inicio{% endblock %}
+{% block header %}
+  <h1>KFC database </h1>
+{% endblock %}
+
+{% block content %}
+<h2>Sobre</h2>
+<p>Este trabalho foi feito com
+<a href="https://pymysql.readthedocs.io/">PyMySQL</a>,
+<a href="https://flask.palletsprojects.com">Flask</a>, e
+<a href="https://jinja.palletsprojects.com">Jinja</a>.
+</p>
+<p>Feito por:</p>
+<ul>
+  <li>David Nogueira</li>
+  <li>Ricardo Amorim</li>
+  <li>Tomás Rodrigues</li>
+</ul>
+
+<h2>Estatisticas da base de dados</h2>
+<table>
+<tr>
+  <th>Items</th>
+  <th>Contagem</th>
+</tr>
+<tr>
+  <td>Categorias</td>
+  <td>{{cat.Num}}</td>
+</tr>
+<tr>
+  <td>Menus</td>
+  <td>{{menu.Num}}</td>
+</tr>
+<tr>
+  <td>Ingredientes</td>
+  <td>{{ingre.Num}}</td>
+</tr>
+{% for sta in stats %}
+<tr>
+  <td><a href="/cat/{{ sta.Id }}">{{sta.Nome}}</a></td>
+  <td><a href="/cat/{{ sta.Id }}">{{sta.Num}}</a></td>
+</tr>
+{% endfor%}
+</table>
+
+{% endblock %}
