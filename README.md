@@ -1,77 +1,48 @@
 
-# Sumário
+# About the project
 
-[Eduardo R. B. Marques](https://www.dcc.fc.up.pt/~edrdo/), DCC/FCUP
+Python application for an KFC database. Project for the curricular unit of DataBases.
 
-Aplicação Python demonstrando o acesso à BD MovieStream
-
-#  Referência
+#  Reference
 
 - [PyMySQL](https://pymysql.readthedocs.io/)
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 - [Jinja templates](https://jinja.palletsprojects.com/en/3.0.x/)
+- [Eduardo R. B. Marques](https://www.dcc.fc.up.pt/~edrdo/), DCC/FCUP
 
 
-# Instalação de dependências
+# Installation
 
-## Python 3 e pip 
+## Python 3 and pip 
 
-Deve ter o Python 3 e o gestor de pacotes pip instalado. Pode
-instalar os mesmos em Ubuntu por exemplo usando:
+You must have Python 3 and the pip package manager installed. You can
+install them under Ubuntu for example using:
 
 ```
 sudo apt-get install python3 python3-pip
 ```
 
-## Bibliotecas Python
+## Python libraries
 
 ```
 pip3 install --user Flask==1.1.4 PyMySQL==1.0.2 cryptography==36.0.0
 ```
 
 
-# Configuração da BD
+# Database configuration 
 
-Edite o ficheiro `db.py` no que se refere à configuração da sua BD, modificando os parâmetros `DB` (nome da base de dados), `USER` (nome do utilizador) e `PASSWORD` (senha do utilizador).
+Edit the `db.py` file with respect to your DB configuration, modifying the `DB` (database name), `USER` (user name) and `PASSWORD` (user password) parameters.
 
-Teste o acesso executando:
-
-```
-python3 test_db_connection.py NOME_DE_UMA_TABELA
-```
-
-Se a configuração do acesso à BD estiver correcto, deverá ser listado o conteúdo da tabela `NOME_DE_UMA_TABELA`, por ex. a tabela `REGION` da BD MovieStream:
+Test the access by running:
 
 ```
-$ python3 test_db.py REGION
-SELECT * FROM REGION
-5 results ...
-{'RegionId': 6, 'Name': 'Other countries', 'RegionManager': 17}
-{'RegionId': 7, 'Name': 'America', 'RegionManager': 16}
-{'RegionId': 8, 'Name': 'Asia', 'RegionManager': 15}
-{'RegionId': 9, 'Name': 'Europe', 'RegionManager': 17}
-{'RegionId': 10, 'Name': 'Africa', 'RegionManager': 15}
+python3 test_db_connection.py NAME_OF_TABLE
 ```
 
-# Execução
+# Execution
 
-Inicie a aplicação executando `python3 server.py` e interaja com a mesma
-abrindo uma janela no seu browser  com o endereço [__http://localhost:9001/__](http://localhost:9001/) 
-
-```
-$ python3 server.py
-2021-11-27 15:07:33 - INFO - Connected to database movie_stream
- * Serving Flask app "app" (lazy loading)
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
-2021-11-27 15:07:33 - INFO -  * Running on http://0.0.0.0:9001/ (Press CTRL+C to quit)
-SELECT COUNT(*) AS movies FROM MOVIE
-2021-11-27 15:07:37 - INFO - SQL: SELECT COUNT(*) AS movies FROM MOVIE Args: None
-SELECT COUNT(*) AS actors FROM ACTOR
-2021-11-27 15:07:37 - INFO - SQL: SELECT COUNT(*) AS actors FROM ACTOR Args: None
-```
+Start the application by running `python3 server.py` and interact with it
+by opening a window in your browser with the address [__http://localhost:9001/__](http://localhost:9001/)
 
 
 
