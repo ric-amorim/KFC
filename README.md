@@ -1,7 +1,7 @@
 
 # About the project
 
-Python application for a KFC database. Project for the curricular unit of DataBases.
+Python application for a KFC database. Project for the curricular unit of DataBases. all information used was from data released by KFC.
 
 #  Reference
 
